@@ -1,42 +1,80 @@
-import React, { useEffect } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import React from "react";
+import Slider from "react-slick";
 import "./CardSlider.css";
 import Card from "./Card/Card";
-import Autoplay from "embla-carousel-autoplay";
 
 import speakersData from "./speakersData";
 
 export default function CardSlider() {
-  const [academicEmblaRef, academicEmblaApi] = useEmblaCarousel(
-    { loop: true },
-    [
-      Autoplay({
-        speed: 2500,
-        stopOnMouseEnter: true,
-        stopOnInteraction: false,
-      }),
-    ]
-  );
+  const academicSettings = {
+    dots: false,
+    infinite: true,
+    speed: 2000,
+    autoplay: true,
+    pauseOnHover: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    centerMode: true,
+    responsive: [
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 3,
+        }
+      }, {
+        breakpoint: 740,
+        settings: {
+          slidesToShow: 2,
+        }
+      }, {
+        breakpoint: 430,
+        settings: {
+          slidesToShow: 1.5,
+        }
+      }, {
+        breakpoint: 350,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ],
+  };
 
-  const [industryEmblaRef, industryEmblaApi] = useEmblaCarousel(
-    { loop: true },
-    [
-      Autoplay({
-        speed: 4000,
-        stopOnMouseEnter: true,
-        stopOnInteraction: false,
-      }),
-    ]
-  );
-
-  useEffect(() => {
-    if (academicEmblaApi) {
-      academicEmblaApi.scrollTo(1, true);
-    }
-    if (industryEmblaApi) {
-      industryEmblaApi.scrollTo(2, true);
-    }
-  }, [academicEmblaApi, industryEmblaApi]);
+  const industrySettings = {
+    dots: false,
+    infinite: true,
+    speed: 2000,
+    autoplay: true,
+    pauseOnHover: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    centerMode: true,
+    responsive: [
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 3,
+        }
+      }, {
+        breakpoint: 740,
+        settings: {
+          slidesToShow: 2,
+        }
+      }, {
+        breakpoint: 430,
+        settings: {
+          slidesToShow: 1.5,
+        }
+      }, {
+        breakpoint: 350,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ],
+  };
 
   const academicSpeakers = speakersData.filter(
     (speaker) => speaker.category === "Academic"
@@ -48,11 +86,11 @@ export default function CardSlider() {
   return (
     <div id="speaker_container">
       <div id="speakers">
-        <h1 className="heading">Industry Speakers</h1>
-        <div className="embla industry" ref={industryEmblaRef}>
-          <div className="embla__container">
+        <h1 className="heading">Speakers</h1>
+        <div className="slick-carousel industry">
+          <Slider {...industrySettings} >
             {industrySpeakers.map((speaker, index) => (
-              <div className="embla__slide" key={index}>
+              <div key={index}>
                 <Card
                   photo={speaker.photo}
                   name={speaker.name}
@@ -61,14 +99,12 @@ export default function CardSlider() {
                 />
               </div>
             ))}
-          </div>
+          </Slider>
         </div>
-        <h1 className="heading">Academic Speakers</h1>
-
-        <div className="embla academic" ref={academicEmblaRef}>
-          <div className="embla__container">
+        <div className="slick-carousel academic">
+          <Slider {...academicSettings} >
             {academicSpeakers.map((speaker, index) => (
-              <div className="embla__slide" key={index}>
+              <div key={index}>
                 <Card
                   photo={speaker.photo}
                   name={speaker.name}
@@ -77,7 +113,7 @@ export default function CardSlider() {
                 />
               </div>
             ))}
-          </div>
+          </Slider>
         </div>
       </div>
     </div>

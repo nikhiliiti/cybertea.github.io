@@ -14,8 +14,6 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.13",
     "@mui/material": "^5.14.13",
-    "embla-carousel-autoplay": "^8.0.0-rc14",
-    "embla-carousel-react": "^8.0.0-rc14",
     "framer-motion": "^10.16.4",
     "hamburger-react": "^2.5.0",
     "react": "^18.2.0",
