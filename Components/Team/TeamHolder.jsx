@@ -1,6 +1,6 @@
 import TeamCard from "./TeamCard";
 import "./TeamCard.css";
-import MemberImages from './TeamMembers/TeamMembers'
+import MemberImages from '../../src/assets/TeamMembers/TeamMembers'
 
 export default function TeamHolder() {
   return (
