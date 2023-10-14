@@ -338,7 +338,8 @@ function render() {
 if(screen.width > 540){
   setScene();
 }else{
-  document.getElementById("small_bg_container").style.backgroundImage= "/img/earthSmall.png"
+  const bg = document.getElementById("small_bg_container")
+  bg.classList.add("whenSmall")
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(
