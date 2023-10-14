@@ -70,7 +70,7 @@ export default function Navbar() {
             }}
           >
             <a
-              href="/public/img/CyberTEA Brochure Print PDF.pdf"
+              href="/img/CyberTEA Brochure Print PDF.pdf"
               download="CyberTEA Brochure Print PDF.pdf"
             >
               Brochure
