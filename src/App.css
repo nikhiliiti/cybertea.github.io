@@ -20,7 +20,7 @@
 }
 
 .scrolling-text {
-  animation: 27s linear 0s infinite normal none running scrollText;
+  animation: 30s linear 0s infinite normal none running scrollText;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
