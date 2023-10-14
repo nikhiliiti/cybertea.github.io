@@ -8,11 +8,16 @@
   text-align: center;
 }
 
+.embla__container {
+  display: flex;
+  transition: transform 0.3s linear;
+}
+
 #speaker_container {
-  background-color: rgba(205, 230, 251, 1);
   width: 100%;
   padding: 3rem 0;
 }
+
 .heading {
   text-align: center;
   font-family: "Oswald", sans-serif;
@@ -22,6 +27,7 @@
   color: #ffc436;
   border-bottom: 1px solid #ffc436;
 }
+
 #speakers .heading {
   margin-bottom: 25px;
 }
@@ -49,10 +55,4 @@
 
 .industry .embla__slide {
   flex: 0 0 15%;
-}
-
-@media screen and (max-width:500px) {
-  .heading{
-    font-size: 2rem;
-  }
 }
