@@ -26,7 +26,7 @@ export default function TeamHolder() {
             title="sosenkkk"
           />
           <TeamCard
-            name="Mithun .U "
+            name="Mithun U "
             link="https://github.com/Mithun-750"
             image={MemberImages.Mithun}
             design={false}
