@@ -9,12 +9,24 @@ import speakersData from "./speakersData";
 export default function CardSlider() {
   const [academicEmblaRef, academicEmblaApi] = useEmblaCarousel(
     { loop: true },
-    [Autoplay({ speed: 2500, stopOnMouseEnter: true, stopOnInteraction: false, })]
+    [
+      Autoplay({
+        speed: 2500,
+        stopOnMouseEnter: true,
+        stopOnInteraction: false,
+      }),
+    ]
   );
 
   const [industryEmblaRef, industryEmblaApi] = useEmblaCarousel(
     { loop: true },
-    [Autoplay({ speed: 4000, stopOnMouseEnter: true, stopOnInteraction: false, })]
+    [
+      Autoplay({
+        speed: 4000,
+        stopOnMouseEnter: true,
+        stopOnInteraction: false,
+      }),
+    ]
   );
 
   useEffect(() => {
@@ -36,7 +48,7 @@ export default function CardSlider() {
   return (
     <div id="speaker_container">
       <div id="speakers">
-        <h1 className="heading">Speakers</h1>
+        <h1 className="heading">Industry Speakers</h1>
         <div className="embla industry" ref={industryEmblaRef}>
           <div className="embla__container">
             {industrySpeakers.map((speaker, index) => (
@@ -51,6 +63,8 @@ export default function CardSlider() {
             ))}
           </div>
         </div>
+        <h1 className="heading">Academic Speakers</h1>
+
         <div className="embla academic" ref={academicEmblaRef}>
           <div className="embla__container">
             {academicSpeakers.map((speaker, index) => (
