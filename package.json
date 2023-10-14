@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "stats.js": "^0.17.0",
     "three": "^0.157.0",
     "three-orbit-controls": "^82.1.0"
   },

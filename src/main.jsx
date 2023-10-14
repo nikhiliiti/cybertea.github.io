@@ -125,19 +125,29 @@ const setBaseSphere = () => {
   scene.add(baseMesh);
 };
 
-const setShaderMaterial = () => {
-  twinkleTime = 0.03;
-  materials = [];
+// const setShaderMaterial = () => {
+//   twinkleTime = 0.03;
+//   materials = [];
+//   material = new THREE.ShaderMaterial({
+//     side: THREE.DoubleSide,
+//     uniforms: {
+//       u_time: { value: 1.0 },
+//       u_maxExtrusion: { value: 1.0 },
+//     },
+//     vertexShader: vertex,
+//     fragmentShader: fragment,
+//   });
+// };
+function setShaderMaterial() {
   material = new THREE.ShaderMaterial({
     side: THREE.DoubleSide,
-    uniforms: {
-      u_time: { value: 1.0 },
-      u_maxExtrusion: { value: 1.0 },
-    },
+    uniforms: { u_time: { value: 1.0 }, u_maxExtrusion: { value: 1.0 } },
     vertexShader: vertex,
     fragmentShader: fragment,
   });
-};
+  twinkleTime = 0.03;
+  materials = [material];
+}
 
 const setMap = () => {
   let activeLatLon = {};
@@ -246,20 +256,27 @@ const setMap = () => {
   image.src = "img/world_alpha_mini.jpg";
 };
 
-const resize = () => {
-  sizes = {
-    width: container.offsetWidth,
-    height: container.offsetHeight,
-  };
+// const resize = () => {
+//   sizes = {
+//     width: container.offsetWidth,
+//     height: container.offsetHeight,
+//   };
 
-  if (window.innerWidth > 700) camera.position.z = 100;
-  else camera.position.z = 200;
+//   if (window.innerWidth > 700) camera.position.z = 100;
+//   else camera.position.z = 200;
 
-  camera.aspect = sizes.width / sizes.height;
+//   camera.aspect = sizes.width / sizes.height;
+//   camera.updateProjectionMatrix();
+
+//   renderer.setSize(sizes.width, sizes.height);
+// };
+function resize() {
+  const width = container.offsetWidth;
+  const height = container.offsetHeight;
+  camera.aspect = width / height;
   camera.updateProjectionMatrix();
-
-  renderer.setSize(sizes.width, sizes.height);
-};
+  renderer.setSize(width, height);
+}
 
 const mousemove = (event) => {
   isIntersecting = false;
@@ -317,14 +334,14 @@ const listenTo = () => {
   window.addEventListener("mouseup", mouseup.bind(this));
 };
 
-const render = () => {
-  materials.forEach((el) => {
-    el.uniforms.u_time.value += twinkleTime;
+function render() {
+  materials.forEach((material) => {
+    material.uniforms.u_time.value += twinkleTime;
   });
   controls.update();
   renderer.render(scene, camera);
-  requestAnimationFrame(render.bind(this));
-};
+  requestAnimationFrame(render);
+}
 
 setScene();
 
