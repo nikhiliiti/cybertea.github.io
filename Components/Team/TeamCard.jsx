@@ -4,12 +4,13 @@ import "./TeamCard.css";
 export default function TeamCard(props) {
   return (
     <>
-      <a className="team_card" href={props.link} target="_blank">
+      <a className="team_card" href={props.link} target="_blank" rel="noreferrer">
         <div className="about_team">
+          <img src={props.image} alt="Team Member" />
           <h4>{props.name}</h4>
           <div className="about_team_info">
-            {props.design ? <LinkedIn/>: <GitHub />}
-            
+            {props.design ? <LinkedIn /> : <GitHub />}
+
             <h5> {props.title}</h5>
           </div>
         </div>
