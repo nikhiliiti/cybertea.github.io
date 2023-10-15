@@ -66,3 +66,13 @@
   justify-content: center;
   gap: 10px;
 }
+
+.lead img {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 5px;
+}
+
+.lead .about_team_info {
+  display: none;
+}

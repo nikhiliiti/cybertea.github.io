@@ -10,10 +10,10 @@ export default function TeamHolder() {
         <h2 style={{ marginTop: "5px" }}>Lead</h2>
         <div className="team_con">
           <TeamCard
-            name="VryuShab Goyani"
-            link="https://github.com/Vrushabh1217"
+            name="Vrushabh Goyani"
+            link="https://www.linkedin.com/in/vrushabh-goyani-843927224"
             image={MemberImages.Goyani}
-            title="Management Lead"
+            className="lead"
           />
         </div>
         <h2>Web Devlopment Team</h2>
@@ -27,7 +27,7 @@ export default function TeamHolder() {
           />
           <TeamCard
             name="Mithun U "
-            link="https://github.com/Mithun-750"
+            link="https://mithun-750.github.io/"
             image={MemberImages.Mithun}
             design={false}
             title="Mithun.U"
