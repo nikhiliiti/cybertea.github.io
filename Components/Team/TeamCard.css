@@ -76,3 +76,7 @@
 .lead .about_team_info {
   display: none;
 }
+
+#team_img_{
+  object-fit: cover;
+}

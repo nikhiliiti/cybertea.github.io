@@ -59,8 +59,8 @@ const speakersData = [
   },
   {
     photo: p7,
-    name: "Mr. Ujjval Bucha",
-    abt: "Cyware India",
+    name: "Mr. Ujval Bucha",
+    abt: "Product Management Leader",
     link: "https://www.linkedin.com/in/ujvalbucha/",
     category: "Industry",
   },
@@ -109,7 +109,7 @@ const speakersData = [
   {
     photo: p14,
     name: "Dr. Deepak Kumar",
-    abt: "Ministry of Home Affairs-GoI",
+    abt: "Sr. Cyber Intelligence and Forensics Expert, India",
     link: "https://www.linkedin.com/in/d3pak/?originalSubdomain=in",
     category: "Academic",
   },

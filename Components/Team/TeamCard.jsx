@@ -6,7 +6,7 @@ export default function TeamCard(props) {
     <>
       <a className="team_card" href={props.link} target="_blank" rel="noreferrer">
         <div className={"about_team " + props.className}>
-          <img src={props.image} alt="Team Member" />
+          <img id="team_img_" src={props.image} alt="Team Member" />
           <h4>{props.name}</h4>
           <div className="about_team_info">
             {props.design ? <LinkedIn /> : <GitHub />}
