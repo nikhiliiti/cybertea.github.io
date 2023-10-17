@@ -24,7 +24,7 @@ export default function Patron() {
           />
           <PatronCard
             link="https://www.linkedin.com/in/nikhil-tripathi/"
-            name="Nikhil Tripathi"
+            name="Dr. Nikhil Tripathi"
             title="Assistant Professor, IIIT Sri City"
             img="/img/1659677963779.jpeg"
           />
