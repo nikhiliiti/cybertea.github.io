@@ -40,8 +40,9 @@
 }
 
 .card-client:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   transform: scale(1.01);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .user-picture img {
@@ -49,11 +50,11 @@
   width: 12rem;
   height: 12rem;
   border: 2px solid #24364b;
-  border-radius: 999px;
+  border-radius: 9px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0 auto 0.6rem;
 }
 
 .info_container {
