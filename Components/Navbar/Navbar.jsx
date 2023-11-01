@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../src/assets/iiits logo.png";
+import logo from "../../src/assets/cyberTea_Circular.png";
 import { Squash as Hamburger } from "hamburger-react";
 import "./Navbar.css";
 
@@ -39,7 +39,7 @@ export default function Navbar() {
       <nav id="navbar">
         <div className="mobview">
           <h1>
-            <img src={logo} alt="iiits" /> CyberTEA
+            <img src={logo} alt="iiits" id="logo_cyber"/> CyberTEA
           </h1>
           <span id="hamburger" onClick={NavToggle}>
             <Hamburger toggled={expand} />
