@@ -39,7 +39,10 @@ export default function Navbar() {
       <nav id="navbar">
         <div className="mobview">
           <h1>
-            <img src={logo} alt="iiits" id="logo_cyber"/> CyberTEA
+            <a href={logo} target="_blank" rel="noopener noreferrer">
+              <img src={logo} alt="iiits" id="logo_cyber" />
+            </a>
+            CyberTEA
           </h1>
           <span id="hamburger" onClick={NavToggle}>
             <Hamburger toggled={expand} />
