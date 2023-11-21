@@ -73,8 +73,8 @@ export default function Navbar() {
             }}
           >
             <a
-              href="/img/CyberTEA Brochure Print PDF.pdf"
-              download="CyberTEA Brochure Print PDF.pdf"
+              href="/img/CyberTEA_Brochure.pdf"
+              download="CyberTEA_Brochure.pdf"
             >
               Brochure
             </a>
