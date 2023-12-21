@@ -1,4 +1,3 @@
-import React from "react";
 import "./ScheduleAndRegister.css";
 import Registration from "../Registration/Registration";
 
@@ -10,9 +9,7 @@ const NewsSchedule = () => {
           <h1>Schedule</h1>
         </div>
         <div className="NewsSchedule-body">
-          <ul>
-            <li>Coming soon...</li>
-          </ul>
+          <img src="/img/CyberTEA-Schedule of the Workshop.jpg" />
         </div>
       </div>
       <div id="news">
