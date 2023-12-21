@@ -39,7 +39,6 @@
 
 .NewsSchedule-body {
   padding: 20px;
-  overflow-x: scroll;
 }
 
 .NewsSchedule-body img{
@@ -90,6 +89,12 @@
 
 @media screen and (max-width: 580px){
   .NewsSchedule-body{
-    padding: 5px 0;
+  padding: 5px 0;
+  }
+}
+
+@media screen and (max-width: 545px){
+  .NewsSchedule-body{
+  overflow-x: scroll ;
   }
 }
