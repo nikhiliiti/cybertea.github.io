@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import logo from "../../src/assets/cyberTea_Circular.png";
 import { Squash as Hamburger } from "hamburger-react";
 import "./Navbar.css";
