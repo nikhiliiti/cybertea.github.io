@@ -9,7 +9,7 @@ const NewsSchedule = () => {
           <h1>Schedule</h1>
         </div>
         <div className="NewsSchedule-body">
-          <img src="/img/CyberTEA-Schedule of the Workshop.jpg" />
+          <img src="/src/assets/CyberTEA-Schedule of the Workshop.jpg" />
         </div>
       </div>
       <div id="news">
