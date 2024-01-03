@@ -1,5 +1,6 @@
 import "./ScheduleAndRegister.css";
 import Registration from "../Registration/Registration";
+import Schedule from "../../src/assets/CyberTEA-Schedule of the Workshop.jpg";
 
 const NewsSchedule = () => {
   return (
@@ -9,7 +10,7 @@ const NewsSchedule = () => {
           <h1>Schedule</h1>
         </div>
         <div className="NewsSchedule-body">
-          <img src="/src/assets/CyberTEA-Schedule of the Workshop.jpg" />
+          <img src={Schedule} />
         </div>
       </div>
       <div id="news">
